@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox id="MainFrame" fx:id="MainFrame" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eu.su.mas.dedale.env.gs.gui.MyController">
+  <children>
+    <MenuBar fx:id="menuBar" VBox.vgrow="NEVER">
+      <menus>
+            <Menu fx:id="menuGame" mnemonicParsing="false" text="Game">
+               <items>
+                  <MenuItem fx:id="configure" mnemonicParsing="false" onAction="#dedaleConfigure" text="Configure" />
+                  <MenuItem fx:id="start" mnemonicParsing="false" onAction="#dedaleStart" text="Start" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="exit" mnemonicParsing="false" onAction="#handleExitAction" text="Quit" />
+               </items>
+            </Menu>
+        <Menu fx:id="menumap" mnemonicParsing="false" text="Map">
+          <items>
+                  <MenuItem fx:id="loadtopology" mnemonicParsing="false" onAction="#dedaleLoadTopo" text="Load topology" />
+            <MenuItem fx:id="createtopology" mnemonicParsing="false" onAction="#dedaleCreateTopo" text="Create topoloy" />
+            <MenuItem fx:id="savetopoloy" mnemonicParsing="false" onAction="#dedaleSaveTopo" text="Save as.." />
+          </items>
+        </Menu>
+        <Menu fx:id="menuhelp" mnemonicParsing="false" text="Help">
+          <items>
+                  <MenuItem fx:id="forum" mnemonicParsing="false" onAction="#dedaleForum" text="Forum (not yet)" />
+                  <MenuItem fx:id="tchat" mnemonicParsing="false" onAction="#dedaleTchat" text="Tchat" />
+                  <MenuItem fx:id="website" mnemonicParsing="false" onAction="#dedaleWebsite" text="Website &amp; Tutorials" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+           		 <MenuItem fx:id="about" mnemonicParsing="false" onAction="#dedaleAbout" text="About Dedale" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane fx:id="generalpane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <SplitPane fx:id="splitpane" dividerPositions="0.2" prefHeight="371.0" prefWidth="642.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane fx:id="left" minHeight="0.0" minWidth="0.0" prefHeight="332.0" prefWidth="172.0">
+                     <children>
+                        <TableView fx:id="observeTab" prefHeight="369.0" prefWidth="181.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                              <TableColumn prefWidth="75.0" text="C3" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children></AnchorPane>
+                <AnchorPane fx:id="right" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" />
+              </items>
+            </SplitPane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

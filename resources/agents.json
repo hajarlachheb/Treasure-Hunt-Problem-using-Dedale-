@@ -1,0 +1,118 @@
+[
+  {
+    "agentType":"agentExplo",
+    "agentName": "Explo1",
+    "communicationRange": 3,
+    "initialLocation": "free",
+    "backPackCapacityGold": -1,
+    "backPackCapacityDiamond":-1,
+    "detectionRadius": 0,
+    "strengthExpertise": 2,
+    "lockPickingExpertise":3
+  },
+  {
+    "agentType":"agentExplo",
+    "agentName": "Explo2",
+    "communicationRange": 3,
+    "initialLocation": "free",
+    "backPackCapacityGold": -1,
+    "backPackCapacityDiamond":-1,
+    "detectionRadius": 0,
+    "strengthExpertise": 3,
+    "lockPickingExpertise":2
+  },
+  {
+    "agentType":"agentExplo",
+    "agentName": "Explo3",
+    "communicationRange": 3,
+    "initialLocation": "free",
+    "backPackCapacityGold": -1,
+    "backPackCapacityDiamond":-1,
+    "detectionRadius": 0,
+    "strengthExpertise": 3,
+    "lockPickingExpertise":2
+  },
+  {
+    "agentType":"agentCollect",
+    "agentName": "Collect1",
+    "communicationRange": 3,
+    "initialLocation": "free",
+    "backPackCapacityGold": 50,
+    "backPackCapacityDiamond":0,
+    "detectionRadius": 0,
+    "strengthExpertise": 1,
+    "lockPickingExpertise":1
+  }
+,
+  {
+    "agentType":"agentCollect",
+    "agentName": "Collect2",
+    "communicationRange": 3,
+    "initialLocation": "free",
+    "backPackCapacityGold": 50,
+    "backPackCapacityDiamond":0,
+    "detectionRadius": 0,
+    "strengthExpertise": 1,
+    "lockPickingExpertise":1
+  }
+,
+  {
+    "agentType":"agentCollect",
+    "agentName": "Collect3",
+    "communicationRange": 3,
+    "initialLocation": "free",
+    "backPackCapacityGold": 0,
+    "backPackCapacityDiamond":50,
+    "detectionRadius": 0,
+    "strengthExpertise": 1,
+    "lockPickingExpertise":1
+  }
+,
+  {
+    "agentType":"agentCollect",
+    "agentName": "Collect4",
+    "communicationRange": 3,
+    "initialLocation": "free",
+    "backPackCapacityGold": 0,
+    "backPackCapacityDiamond":50,
+    "detectionRadius": 0,
+    "strengthExpertise": 1,
+    "lockPickingExpertise":1
+  }
+,
+  {
+    "agentType":"agentTanker",
+    "agentName": "Tanker1",
+    "communicationRange": 3,
+    "initialLocation": "free",
+    "backPackCapacityGold": 400,
+    "backPackCapacityDiamond":400,
+    "detectionRadius": 0,
+    "strengthExpertise": 0,
+    "lockPickingExpertise":0
+  }
+,
+  {
+    "agentType":"agentTanker",
+    "agentName": "Tanker2",
+    "communicationRange": 3,
+    "initialLocation": "free",
+    "backPackCapacityGold": 400,
+    "backPackCapacityDiamond":400,
+    "detectionRadius": 0,
+    "strengthExpertise": 0,
+    "lockPickingExpertise":0
+  }
+,
+  {
+    "agentType":"wumpus",
+    "agentName": "Coordinator1",
+    "communicationRange": 3,
+    "initialLocation": "free",
+    "backPackCapacityGold": 0,
+    "backPackCapacityDiamond":0,
+    "detectionRadius": 0,
+    "strengthExpertise": 0,
+    "lockPickingExpertise":0
+  }
+]

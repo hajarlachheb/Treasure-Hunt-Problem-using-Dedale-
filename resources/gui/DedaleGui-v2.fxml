@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox id="MainFrame" fx:id="MainFrame" onKeyPressed="#keyPressed" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eu.su.mas.dedale.gui.MyController">
+  <children>
+    <MenuBar fx:id="menuBar" VBox.vgrow="NEVER">
+      <menus>
+            <Menu fx:id="menuGame" mnemonicParsing="false" text="Menu">
+               <items>
+                  <MenuItem fx:id="configure" mnemonicParsing="false" onAction="#dedaleConfigure" text="Configure" />
+                  <MenuItem fx:id="start" mnemonicParsing="false" onAction="#dedaleStart" text="Start" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="exit" mnemonicParsing="false" onAction="#handleExitAction" text="Quit" />
+               </items>
+            </Menu>
+        <Menu fx:id="menumap" mnemonicParsing="false" text="Map">
+          <items>
+            <MenuItem fx:id="loadtopology" mnemonicParsing="false" onAction="#dedaleLoadTopo" text="Load topology" />
+            <MenuItem fx:id="createtopology" mnemonicParsing="false" onAction="#dedaleCreateTopo" text="Create topoloy" />
+            <MenuItem fx:id="savetopoloy" mnemonicParsing="false" onAction="#dedaleSaveTopo" text="Save as.." />
+          </items>
+        </Menu>
+        <Menu fx:id="menuhelp" mnemonicParsing="false" text="Help">
+          <items>
+                  <MenuItem fx:id="forum" mnemonicParsing="false" onAction="#dedaleForum" text="Forum (not yet)" />
+                  <MenuItem fx:id="tchat" mnemonicParsing="false" onAction="#dedaleTchat" text="Tchat" />
+                  <MenuItem fx:id="website" mnemonicParsing="false" onAction="#dedaleWebsite" text="Website &amp; Tutorials" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+           		 <MenuItem fx:id="about" mnemonicParsing="false" onAction="#dedaleAbout" text="About Dedale" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane fx:id="generalpane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <SplitPane fx:id="splitpane" dividerPositions="0.2" prefHeight="371.0" prefWidth="642.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane fx:id="left" minHeight="0.0" minWidth="0.0" prefHeight="332.0" prefWidth="172.0">
+                     <children>
+                        <SplitPane dividerPositions="0.1670235546038544" orientation="VERTICAL" prefHeight="469.0" prefWidth="156.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="166.0" prefWidth="158.0">
+                                 <children>
+                                    <Label alignment="CENTER" centerShape="false" contentDisplay="TOP" prefHeight="16.0" prefWidth="149.0" text="Communication" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="System Bold Italic" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="msgSent" centerShape="false" layoutX="9.0" layoutY="20.0" prefHeight="29.0" prefWidth="149.0" snapToPixel="false" text="nbSent = 0" AnchorPane.leftAnchor="9.0" AnchorPane.topAnchor="15.0" />
+                                    <Label fx:id="msgReceived" centerShape="false" layoutX="9.0" layoutY="69.0" prefHeight="23.0" prefWidth="158.0" text="nbReceived = 0" AnchorPane.leftAnchor="9.0" AnchorPane.topAnchor="40.0" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TableView fx:id="observeTab" layoutY="20.0" prefHeight="364.0" prefWidth="156.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="16.0" prefWidth="156.0" text="Ressources" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="System Bold Italic" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+                <AnchorPane fx:id="right" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" />
+              </items>
+            </SplitPane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
